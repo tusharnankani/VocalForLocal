@@ -6,44 +6,57 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vocal For Local</title>
 		<link rel="stylesheet" href="../static/css/style.css" />
+
+        <script
+        type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                { pageLanguage: "en" },
+                "google_translate_element"
+            );
+        }
+    </script>
 	</head>
 	<body>
 		<nav id="navbar">
 			<div class="logo" href="#">VOCAL FOR LOCAL</div>
-			<div class="translate">translate</div>
+			<div id="google_translate_element" class="translate"></div>
 		</nav>
         <div class="flex">
         <div class="first">
             <div class="info">
                 <div class="Business">
-                    <div>For Local Businessess</div>
-                    <div>List Your support for local business</div>
+                    <div class="sub-title">For Local Businessess</div>
+                    <div class="tagline">List Your support for local business</div>
                 </div>
                 <div class="Customers">
-                    <div>For Customers</div>
-                    <div>Show your support for local businesses</div>
+                    <div class="sub-title">For Customers</div>
+                    <div class="tagline">Show your support for local businesses</div>
                 </div>
             </div>
-            <div class="image1">
-                FIRST IMAGE
+                <img src="../static/images/img1.svg" alt="image1" class="image1">
             </div>
-        </div>
-        <div class="second">
-            <div  class="image2">SECOND IMAGE</div>
-            <div>
-                <form action="#">
-                    <div>Please Enter Your Name</div>
-                    <div><input type="text" placeholder="1234567890"></div>
-                    <div>Third Row</div>
-                    <div>Enter Four Digit OTP</div>
-                    <div><input type="text" placeholder="1234"></div>
-                    <div>
-                        <Button><a href="#">SUBMIT</Button>a></Button>
+            <div class="second">
+                <!-- <div  class="image2">SECOND IMAGE</div> -->
+                <img src="../static/images/img2.svg" alt="image2" class="image2">
+                <div class="form">
+                    <form action="#">
+                        <div>Please Enter Your Name</div>
+                        <div><input type="text" placeholder="1234567890"></div>
+                        <div>Third Row</div>
+                        <div>Enter Four Digit OTP</div>
+                        <div><input type="text" placeholder="1234"></div>
+                        <div>
+                            <Button><a href="#">SUBMIT<a></Button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                    <img src="../static/images/img3.svg" alt="image3" class="image3">
+                </div>
             </div>
-            <div class="image3">THIRD IMAGE</div>
-        </div>
-    </div>
-	</body>
-</html>
+        </body>
+        </html>
+        
