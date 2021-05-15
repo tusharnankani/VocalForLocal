@@ -4,5 +4,21 @@ from .import views
 app_name = 'accounts'
 
 urlpatterns = [
-    path('login/', views.login_view),
+    path('', views.homepage, name = 'homepage'),
 ]
+
+    # parindas 
+
+    
+    # #registered/not-registered customer
+    # path('customer-dashboard/',views.customer_dashboard),   
+
+    # #registered seller
+    # path('seller-dashboard/',views.seller_dashboard),
+
+    # #not-registered seller 
+    # path('seller-register/',views.seller_register),
+
+    # path('',views.homepage),    
+    
+

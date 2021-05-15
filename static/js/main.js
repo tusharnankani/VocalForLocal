@@ -1,14 +1,15 @@
 console.log("ok");
 
 let submit = document.getElementById("Submit");
+let login = document.getElementById("Login");
+let loginDiv = document.getElementById("LoginDiv");
+let otp;
 
 window.addEventListener("load", (e) => {
 	entities = Array.from(document.querySelectorAll(".entity"));
 	document
 		.getElementById("EntitySelect")
 		.addEventListener("click", selectEntity);
-
-	console.log(entities);
 
 	submit.addEventListener("click", handleSubmit);
 });
@@ -25,9 +26,8 @@ function handleSubmit() {
 	let phoneWrapper = document.getElementById("NumberWrapper");
 	let otpWrapper = document.getElementById("OtpWrapper");
 	let entSel = document.getElementById("EntitySelect");
-	console.log(phone.value);
 
-	let otp = "";
+	otp = "";
 	for (let i = 0; i < 4; i++)
 		otp += Math.floor(10 * Math.random()).toString();
 
@@ -38,4 +38,25 @@ function handleSubmit() {
 	phoneWrapper.classList.add("hide");
 	// entSel.classList.add("hide");
 	entSel.classList.add("disable");
+
+	submit.classList.add('hide');
+	loginDiv.classList.remove('hide');
+
 }
+
+
+
+
+login.addEventListener('click',() => {
+	let otpEntered = document.getElementById("Otp").value;
+	console.log(otpEntered);
+	if(otpEntered === otp) {
+		console.log('OTP RIGHT!!')
+	} else {
+		alert("Wrong OTP! Please Try Again.");
+		location.reload();
+	}
+});
+
+
+// temp
