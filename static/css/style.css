@@ -4,8 +4,8 @@
 	margin: 0;
 	padding: 0;
 	font-family: "Montserrat", Sans-Serif;
-	box-sizing: border-box;
-	border: 1px solid red;
+	/* box-sizing: border-box;
+	border: 1px solid red; */
 }
 
 nav {
@@ -21,8 +21,12 @@ nav {
 .translate {
 	color: azure;
 	padding: 0.1em;
-	margin: 2em;
+	margin: 4em;
 	letter-spacing: 1px;
+}
+
+.translate {
+	margin-right: 5.8em;
 }
 
 /* Multiple languages using translate */
@@ -43,7 +47,6 @@ select.goog-te-combo {
 /* body stylings */
 
 .flex {
-	/* width: 100vw; */
 	height: 88vh;
 	display: flex;
 	flex-direction: column;
@@ -63,10 +66,10 @@ select.goog-te-combo {
 	display: flex;
 	height: 100%;
 	width: 50%;
-	flex-direction: column;
+	/* flex-direction: column; */
 	justify-content: space-around;
 	/* align-items: center; */
-	padding-left: 4.5em;
+	padding: 4.5em;
 }
 
 .business,
@@ -95,11 +98,113 @@ select.goog-te-combo {
 	height: 100%;
 }
 
+.image3 {
+	margin-top: 4em;
+	margin-left: 4em;
+	height: 70%;
+}
+
 .form {
 	width: 30%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	background: rgb(218, 216, 216);
+	background: rgb(255, 255, 255);
 	margin: 0 7%;
+}
+
+.form > form div {
+	text-align: center;
+}
+
+.form > h2 {
+	/* padding: 0 0 0 3em; */
+	font-size: 1.2em;
+	/* text-align: center; */
+}
+
+/* Form */
+.floating-label {
+	font-size: 1em;
+	position: relative;
+}
+
+input {
+	color: inherit;
+	font-size: 1.25em;
+
+	padding: 0.7rem;
+	display: block;
+	width: 80%;
+
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid #757575;
+}
+input::placeholder {
+	color: transparent;
+	user-select: none;
+}
+input:focus {
+	outline: none;
+	border-bottom: 2px solid rgb(56, 48, 4);
+}
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+	top: -0.6rem;
+	font-size: 0.9rem;
+	color: rgb(56, 48, 4);
+}
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+	width: 50%;
+}
+
+.floating-label label {
+	color: #999;
+	position: absolute;
+	pointer-events: none;
+	left: 0.5em;
+	top: 1em;
+	transition: 0.2s ease all;
+}
+
+button {
+	padding: 0.7rem 1.5rem;
+	text-align: center;
+
+	font-size: inherit;
+	font-weight: bold;
+
+	height: min-content;
+
+	outline: none;
+	background: transparent;
+
+	border: #14213d solid 2px;
+	border-radius: 0.5em;
+
+	justify-self: center;
+	cursor: pointer;
+	transition: 200ms ease;
+}
+
+button:hover,
+button:focus {
+	background-color: #00249930;
+}
+
+.enter-phone {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.hide {
+	display: none;
+}
+
+h5 {
+	padding-left: em;
 }

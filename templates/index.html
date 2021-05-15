@@ -7,6 +7,8 @@
 		<title>Vocal For Local</title>
 		<link rel="stylesheet" href="../static/css/style.css" />
 
+        <script defer="" src="../static/js/main.js"></script>
+
         <script
         type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
@@ -29,33 +31,51 @@
         <div class="first">
             <div class="info">
                 <div class="Business">
-                    <div class="sub-title">For Local Businessess</div>
-                    <div class="tagline">List Your support for local business</div>
+                    <div class="sub-title">For Local Business</div>
+                    <div class="tagline">List Your Local Business with us!</div>
                 </div>
                 <div class="Customers">
                     <div class="sub-title">For Customers</div>
-                    <div class="tagline">Show your support for local businesses</div>
+                    <div class="tagline">Show your support for local businesses!</div>
                 </div>
             </div>
                 <img src="../static/images/img1.svg" alt="image1" class="image1">
             </div>
             <div class="second">
-                <!-- <div  class="image2">SECOND IMAGE</div> -->
                 <img src="../static/images/img2.svg" alt="image2" class="image2">
                 <div class="form">
-                    <form action="#">
-                        <div>Please Enter Your Name</div>
-                        <div><input type="text" placeholder="1234567890"></div>
-                        <div>Third Row</div>
-                        <div>Enter Four Digit OTP</div>
-                        <div><input type="text" placeholder="1234"></div>
-                        <div>
-                            <Button><a href="#">SUBMIT<a></Button>
-                            </div>
-                        </form>
-                    </div>
-                    <img src="../static/images/img3.svg" alt="image3" class="image3">
+                    <h2>Please enter your Phone Number</h2>
+			
+				<div class = "floating-label" id = "NumberWrapper">
+					<input
+						id = "Number"
+						type = "tel"
+						placeholder = "placeholder"
+						pattern="[0-9]{10}"
+						maxlength="10"
+						required=""
+					/>
+					<label for = "Number">Contact Number</label>
+				</div>
+
+				<h5><sup>*</sup> A 4-digit OTP will be sent to your Phone Number</h5>
+
+				<div class = "floating-label hide" id = "OtpWrapper">
+					<input
+						id = "Otp"
+						type = "otp"
+						placeholder = "placeholder"
+						pattern="[0-9]{4}"
+						maxlength="4"
+						required=""
+					/>
+					<label for = "Otp">OTP</label>
+				</div>
+                <div class="sub-btn">
+                    <button type="submit" id="Submit">SUBMIT</button>
                 </div>
+            </div>
+            <img src="../static/images/img3.svg" alt="image3" class="image3">
             </div>
         </body>
         </html>
