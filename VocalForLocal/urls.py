@@ -5,7 +5,16 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.homepage),
-    #path('accounrs/',include('accounts.urls')),
-    #path('about/',views.aboutus),
+    
+    #registered/not-registered customer
+    path('customer-dashboard/',views.customer_dashboard),   
+
+    #registered seller
+    path('seller-dashboard/',views.seller_dashboard),
+
+    #not-registered seller 
+    path('seller-register/',views.seller_register),
+
+    path('',views.homepage),    
+    
 ]
