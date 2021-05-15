@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,900;1,500;1,600;1,900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Montserrat", Sans-Serif;
+	box-sizing: border-box;
+}
+
+nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 4em;
+	background-color: #14213d;
+}
+
+.logo,
+.translate {
+	color: azure;
+	padding: 0.1em;
+	margin: 2em;
+	letter-spacing: 1px;
+}
+
+/* Multiple languages using translate */
+#google_translate_element img,
+.goog-te-banner {
+	display: none;
+}
+
+select.goog-te-combo {
+	height: 25px;
+	border-radius: 30px;
+}
+
+.goog-logo-link {
+	height: 1px;
+}
+.checkbox{
+    display: flex;
+}
+.check-box1, .check-box2{
+    display:flex;
+    /* margin: 1em; */
+}
+label, input{
+    display: inline-block;
+}
+.register {
+    color: #14213d;
+    width: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #F4F4F4;
+	margin: auto;
+    margin-top: 1.8%;
+    position: relative;
+    padding: 0.2em;
+    height: 420px;
+    border-radius: 20px;
+}
+.button {
+    color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 14%;
+    margin-top: 20px;
+}
+Button{
+    width: 20%;
+    height:100%;
+    background-color: transparent;
+    border: 0;
+    margin: auto;
+    background-color: #14213d;
+    border-radius: 10px;
+}
+.register > div{
+    margin-left: 5%;
+    padding: 10px 30px 10px 0px;
+}
+.shopname{
+    margin-top: 3%;
+}
+input{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    outline: none;
+    width: 50%;
+}
+input:hover{
+    border-bottom: 1px solid black;
+}
+a{
+    text-decoration: none;
+    color: azure;
+}
+.image {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 80%;
+}
