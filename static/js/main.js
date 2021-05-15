@@ -1,28 +1,41 @@
 console.log("ok");
 
-let submitbtn = document.getElementById("Submit");
-let phone = get("#Number");
-console.log(phone);
+let submit = document.getElementById("Submit");
 
-submitbtn.onclick = function() {generate()};
+window.addEventListener("load", (e) => {
+	entities = Array.from(document.querySelectorAll(".entity"));
+	document
+		.getElementById("EntitySelect")
+		.addEventListener("click", selectEntity);
 
+	console.log(entities);
 
-function generate() {
-    // if()
-    let otp = "";
-    for(let i = 0; i < 4; i++)
-        otp += Math.floor(10 * Math.random()).toString();
-    
-    console.log("OTP:", otp);
-    alert("(Only for live demo)\nOTP: " + otp);
+	submit.addEventListener("click", handleSubmit);
+});
 
+function selectEntity(e) {
+	if (!e.target.matches("button:not(.disabled)")) return;
+
+	for (let i of entities) i.classList.remove("selected");
+	e.target.classList.add("selected");
 }
 
-function isValid(phone, inputOtp){
-    let otp = Otp.otps[phone];
-    if(!otp)
-        return false;
-    
-    return otp.otp == inputOtp && !Util.hasExpired(otp.expiry);
-}
+function handleSubmit() {
+	let phone = document.getElementById("Number");
+	let phoneWrapper = document.getElementById("NumberWrapper");
+	let otpWrapper = document.getElementById("OtpWrapper");
+	let entSel = document.getElementById("EntitySelect");
+	console.log(phone.value);
 
+	let otp = "";
+	for (let i = 0; i < 4; i++)
+		otp += Math.floor(10 * Math.random()).toString();
+
+	console.log("OTP:", otp);
+	alert("(Only for live demo)\nOTP: " + otp);
+
+	otpWrapper.classList.remove("hide");
+	phoneWrapper.classList.add("hide");
+	// entSel.classList.add("hide");
+	entSel.classList.add("disable");
+}

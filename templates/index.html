@@ -44,21 +44,25 @@
             <div class="second">
                 <img src="../static/images/img2.svg" alt="image2" class="image2">
                 <div class="form">
-                    <h2>Please enter your Phone Number</h2>
-			
+                    <div id="EntitySelect" class="hide">
+                        <button class="entity" data-value="business">Business</button>
+                        <button class="entity" data-value="consumer">Consumer</button>
+                    </div>
+                    
 				<div class = "floating-label" id = "NumberWrapper">
 					<input
-						id = "Number"
-						type = "tel"
-						placeholder = "placeholder"
-						pattern="[0-9]{10}"
-						maxlength="10"
-						required=""
+                    id = "Number"
+                    type = "tel"
+                    placeholder = "placeholder"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required=""
 					/>
 					<label for = "Number">Contact Number</label>
+                    <h5><sup>*</sup> A 4-digit OTP will be sent to your Phone Number</h5>
 				</div>
+                
 
-				<h5><sup>*</sup> A 4-digit OTP will be sent to your Phone Number</h5>
 
 				<div class = "floating-label hide" id = "OtpWrapper">
 					<input

@@ -174,7 +174,7 @@ button {
 	text-align: center;
 
 	font-size: inherit;
-	font-weight: bold;
+	font-weight: 600;
 
 	height: min-content;
 
@@ -187,11 +187,14 @@ button {
 	justify-self: center;
 	cursor: pointer;
 	transition: 200ms ease;
+
+	letter-spacing: 2px;
 }
 
 button:hover,
 button:focus {
-	background-color: #00249930;
+	background-color: #14213d;
+	color: azure;
 }
 
 .enter-phone {
@@ -201,10 +204,44 @@ button:focus {
 	position: relative;
 }
 
+h5 {
+	padding: 1em;
+}
+
+#OtpWrapper input {
+	-webkit-text-security: square;
+}
+
+#EntitySelect {
+	display: flex;
+	align-items: center;
+}
+
+.entity {
+	margin: 1em;
+}
+
+#Submit {
+	margin-left: 7em;
+	width: 10rem;
+}
+
+#Submit:hover,
+#Submit:focus {
+	background-color: #00249930;
+	color: #000000;
+}
+
+.entity.selected {
+	background-color: #14213d;
+	color: azure;
+	opacity: 0.9;
+}
+
 .hide {
 	display: none;
 }
 
-h5 {
-	padding-left: em;
+.disable {
+	pointer-events: none;
 }
