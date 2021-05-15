@@ -2,9 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-class RegisteredUser(models.Model):
+class User(models.Model):
 
-  phone = models.CharField(null=False, blank=False, unique=True)
+  phone = models.CharField(max_length=10)
   pincode = models.CharField(max_length=6)  
 
 class Seller(models.Model):
