@@ -134,6 +134,12 @@ input {
 	align-items: center;
 }
 
+.star {
+	width: 20px;
+	height : 20px;
+}
+
+
 img {
 	display: inline-block;
 }
@@ -182,20 +188,12 @@ img {
 }
 
 #popup-wrapper {
-	z-index: 100;
-	position: absolute;
+	position: relative;
 	transition: all 0.3s ease;
 	display: flex;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-	background: rgba(255, 255, 255, 0.25);
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	backdrop-filter: blur(4px);
-	-webkit-backdrop-filter: blur(4px);
-	border-radius: 10px;
-	border: 1px solid rgba(255, 255, 255, 0.18);
-	top: 35vh;
 }
 
 #popup {
@@ -209,7 +207,7 @@ img {
 
 #popup h2,
 #popup button {
-	margin: 1em;
+	margin: 0.5em;
 }
 
 button {
@@ -224,11 +222,13 @@ button {
 	border-radius: 0.5em;
 
 	justify-self: center;
+	align-self : center;
 	cursor: pointer;
 	transition: 200ms ease;
 
 	letter-spacing: 2px;
 	position: relative;
+	margin-left: 24em;
 }
 
 button:hover,
@@ -256,7 +256,7 @@ input {
 	border-radius: 0;
 }
 input::placeholder {
-	color: transparent;
+	/* color: transparent; */
 	user-select: none;
 }
 input:focus {

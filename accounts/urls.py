@@ -5,7 +5,7 @@ app_name = 'accounts'
 
 urlpatterns = [
     path('', views.homepage, name = 'homepage'),
-    path('customer_dashboard', views.customer_dashboard, name = 'customer_dashboard'),
+    path('customer_dashboard/', views.customer_dashboard, name = 'customer_dashboard'),
 
     #registered seller
     path('seller_dashboard/<str:name>/',views.seller_dashboard,name='seller_dashboard'),

@@ -34,7 +34,26 @@ def homepage(request):
   return render(request, "accounts/index.html")
 
 def customer_dashboard(request):
-  return render(request,'accounts/customer-dashboard.html')
+  sellers = Seller.objects.all()
+  if request.method == 'POST' : 
+    pin = request.POST['pincode']
+    tag = request.POST['tag']
+    tag = Tag.objects.get(name = tag)
+    print(pin, tag)
+    sellers = tag.seller_set.all()
+    dct = {}
+    sorted_sellers = []
+    for i in range(0, len(sellers)) : 
+      dct[i] = abs(int(sellers[i].pincode) - int(pin))
+    values = sorted(dct.values())
+    for i in values : 
+      for key, value in dct.items() : 
+        if value == i :
+          sorted_sellers.append(i) 
+    print(sorted_sellers)
+    context = {'sellers' : sorted_sellers, 'sellers-range' : len(sorted_sellers)}
+  context = {'sellers' : sellers, 'sellers-range' : len(sellers)}
+  return render(request,'accounts/customer-dashboard.html', context)
 
 
 def seller_dashboard(request,name):
