@@ -1,112 +1,250 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static '/css/cusdash.css' %}" />
-    <script
-    type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-    ></script>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement(
-                { pageLanguage: "en" },
-                "google_translate_element"
-            );
-        }
-    </script>
-</head>
-<body>
-    <nav id="navbar">
-        <div class="logo" href="#">VOCAL FOR LOCAL</div>
-        <div id="google_translate_element" class="translate"></div>
-    </nav>
-    <div class="flex">
-        <div class="header">
-            <div class="title">What are you looking for ?</div>
-            <div><input type="text" placeholder="Search"></div>
-        </div>
-        <div class="table">
-            <div class="item">
-                <div class="first">
-                    <div class="name">London Muffin</div>
-                    <div class="number">9999999999</div>
-                </div>
-                <div class="second">7:00 AM - 10:00 PM</div>
-                <div class="third">
-                    <div class="stars">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Customer Dashboard</title>
+		<link rel="stylesheet" href="{% static '/css/cusdash.css' %}?" />
+
+		<script
+			type="text/javascript"
+			src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+		></script>
+		<script type="text/javascript">
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement(
+					{ pageLanguage: "en" },
+					"google_translate_element"
+				);
+			}
+		</script>
+
+		<script type="text/javascript">
+			function PopUp(hideOrshow) {
+				if (hideOrshow == "hide") {
+					document
+						.getElementById("popup-wrapper")
+						.classList.add("hide");
+					document.getElementById("popup").classList.add("hide");
+					// document.querySelector(".flex").classList.remove("blur");
+				} else {
+					document
+						.getElementById("popup-wrapper")
+						.classList.remove("hide");
+					// document.querySelector(".flex").classList.add("blur");
+				}
+			}
+
+			window.onload = function () {
+				setTimeout(function () {
+					PopUp("show");
+				}, 1000);
+			};
+		</script>
+	</head>
+	<body>
+		<nav id="navbar">
+			<div class="logo" href="#">VOCAL FOR LOCAL</div>
+			<div id="google_translate_element" class="translate"></div>
+		</nav>
+
+        
+		<div class="flex">
+            <!-- POPUP -->
+    
+            <div id="popup-wrapper" class="hide">
+                <div id="popup">
+                    <div class="floating-label" id="PincodeWrapper">
+                        <input
+                            name="pincode"
+                            id="Pincode"
+                            placeholder="placeholder"
+                            pattern="[0-9]{6}"
+                            maxlength="6"
+                            required
+                        />
+                        <label for="Number">PINCODE</label>
                     </div>
-                    <div class="tags">
-                        <div class="tag">grocery</div>
-                        <div class="tag">take-away</div>    
-                        <div class="tag">bakery</div>
-                    </div>
-                    <div class="location">
-                        <img src="../static/images/location.svg" alt="location" class="icon">
-                        <div class="distance"><span>x</span>kms</div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="first">
-                    <div class="name">London Muffin</div>
-                    <div class="number">9999999999</div>
-                </div>
-                <div class="second">7:00 AM - 10:00 PM</div>
-                <div class="third">
-                    <div class="stars">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                    </div>
-                    <div class="tags">
-                        <div class="tag">grocery</div>
-                        <div class="tag">take-away</div>
-                        <div class="tag">bakery</div>
-                    </div>
-                    <div class="location">
-                        <img src="../static/images/location.svg" alt="location" class="icon">
-                        <div class="distance"><span>x</span>kms</div>
-                    </div>
+    
+                    <button
+                        type="submit"
+                        name="submit"
+                        value="Submit"
+                        class="submit"
+                        onClick="PopUp('hide')"
+                    >
+                        ENTER PINCODE
+                    </button>
                 </div>
             </div>
-            <div class="item">
-                <div class="first">
-                    <div class="name">London Muffin</div>
-                    <div class="number">9999999999</div>
-                </div>
-                <div class="second">7:00 AM - 10:00 PM</div>
-                <div class="third">
-                    <div class="stars">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                        <img src="../static/images/star.svg" alt="star" class="star">
-                    </div>
-                    <div class="tags">
-                        <div class="tag">grocery</div>
-                        <div class="tag">take-away</div>
-                        <div class="tag">bakery</div>
-                    </div>
-                    <div class="location">
-                        <img src="../static/images/location.svg" alt="location" class="icon">
-                        <div class="distance"><span>x</span>kms</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
+    
+            <!-- POPUP ENDS-->
+			<div class="header">
+				<div class="title">What are you looking for ?</div>
+				<div><input type="text" placeholder="Search" /></div>
+			</div>
+
+			<div class="table">
+				<div class="item">
+					<div class="first">
+						<div class="name">London Muffin</div>
+						<div class="number">9999999999</div>
+					</div>
+					<div class="second">7:00 AM - 10:00 PM</div>
+					<div class="third">
+						<div class="stars">
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+						</div>
+						<div class="tags">
+							<div class="tag">grocery</div>
+							<div class="tag">take-away</div>
+							<div class="tag">bakery</div>
+						</div>
+						<div class="location">
+							<img
+								src="../static/images/location.svg"
+								alt="location"
+								class="icon"
+							/>
+							<div class="distance"><span>x</span>kms</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="first">
+						<div class="name">London Muffin</div>
+						<div class="number">9999999999</div>
+					</div>
+
+					<div class="second">7:00 AM - 10:00 PM</div>
+
+					<div class="third">
+						<div class="stars">
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+						</div>
+
+						<div class="tags">
+							<div class="tag">grocery</div>
+							<div class="tag">take-away</div>
+							<div class="tag">bakery</div>
+						</div>
+
+						<div class="location">
+							<img
+								src="../static/images/location.svg"
+								alt="location"
+								class="icon"
+							/>
+							<div class="distance"><span>x</span>kms</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="first">
+						<div class="name">London Muffin</div>
+						<div class="number">9999999999</div>
+					</div>
+
+					<div class="second">7:00 AM - 10:00 PM</div>
+
+					<div class="third">
+						<div class="stars">
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+							<img
+								src="../static/images/star.svg"
+								alt="star"
+								class="star"
+							/>
+						</div>
+
+						<div class="tags">
+							<div class="tag">grocery</div>
+							<div class="tag">take-away</div>
+							<div class="tag">bakery</div>
+						</div>
+
+						<div class="location">
+							<img
+								src="../static/images/location.svg"
+								alt="location"
+								class="icon"
+							/>
+							<div class="distance"><span>x</span>kms</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
