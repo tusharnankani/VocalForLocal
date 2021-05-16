@@ -40,9 +40,23 @@ def customer_dashboard(request):
 def seller_dashboard(request,name):
   seller = Seller.objects.get(shop_name=name)
   print(seller)
-  context = {"name":seller.shop_name,"owner":seller.shop_owner,"address":seller.address,"time":seller.time,"phone":seller.phone,"pincode":seller.pincode,"category":seller.category}
+  if request.method == 'POST' : 
+    data = request.POST
+    print(data)
+    if Tag.objects.filter(name = request.POST['tag']).exists() : 
+      tag = Tag.objects.get(name = request.POST['tag'])
+    else : 
+      tag = Tag(name = request.POST['tag'])
+      tag.save()
+    if tag in seller.tags.all() : 
+      pass
+    else : 
+      seller.tags.add(tag)
+  tags = seller.tags.all() 
+  context = {"name":seller.shop_name,"owner":seller.shop_owner,"address":seller.address,"time":seller.time,"phone":seller.phone,"pincode":seller.pincode,"category":seller.category, 'tags' : tags}
   return render(request,"accounts/seller-dashboard.html",context)
 
+# @login_required(login_url='seller_register/')
 def seller_register(request):  
   if request.method == 'POST':    
     data = request.POST
@@ -53,3 +67,9 @@ def seller_register(request):
     print(seller)
     return redirect('/seller_dashboard/{}'.format(seller.shop_name))
   return render(request,'accounts/seller-register.html')
+
+
+def logout_view(request):
+  if request.method == 'POST':
+    logout(request)
+    return redirect('/')

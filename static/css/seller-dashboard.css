@@ -21,6 +21,16 @@ nav {
 	background-color: #14213d;
 }
 
+ul {
+  display: inline;
+  }
+
+li {
+  text-decoration: none;
+  display: inline;
+}
+
+
 .logo,
 .translate {
 	color: azure;
@@ -166,8 +176,9 @@ img{
   padding : 5px;
 }
 
-.add-tag a { 
+.add-tag  { 
   color : #FFCF40;
+  margin-top : 10px;
 }
 
 .vaccancy{  
@@ -181,3 +192,21 @@ img{
 .vaccancy a {
   color :  #263238;
 }
+
+/* css for add tag form */
+
+form {
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+}
+
+input[type = text] { 
+  font-size : 20px;
+  padding : 5px;
+  border-radius : 10px;
+  border : 3px solid #263238;
+  color : #FFCF40;
+  font-weight : bold;
+}
+

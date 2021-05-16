@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vocal For Local</title>
-		<link rel="stylesheet" href="{% static '/css/seller-dashboard.css' %}" />
+		<link rel="stylesheet" href="{% static '/css/seller-dashboard.css' %}?" />
 
         <script
         type="text/javascript"
@@ -23,8 +23,18 @@
 	<body>        
 		<nav id="navbar">
 			<div class="logo" href="#">VOCAL FOR LOCAL</div>
-			<div id="google_translate_element" class="translate"></div>
-		</nav>     
+			
+            <ul>             
+                <li>
+                    <form class="logout-link" action="/logout/" method="POST">
+                      {% csrf_token %}
+                      <button type="submit">LOGOUT</button>
+                    </form>
+                  </li>
+                  <li><div id="google_translate_element" class="translate"></div></li>
+            </ul>
+            
+        </nav>    
         <div class="shop-info">        
             <div class="heading">
                 <div class="name">{{ name }}</div>
@@ -60,17 +70,15 @@
                 </div>                
                 <div class="right-part">
                     <div class="tags">
-                        <div class="tag">Grocery</div>
-                        <div class="tag">Take-away</div>
-                        <div class="tag">Bakery</div>
-                        <div class="tag">Bakery</div>
-                        <div class="tag">Bakery</div>
-                        <div class="tag">Bakery</div>
-                        <div class="tag">Bakery</div>
-                        <div class="tag">Bakery</div>
-                        <div class="tag">Bakery</div>
+                        {% for tag in tags %}
+                        <div class="tag">{{tag.name}}</div>
+                        {% endfor %}
                     </div>
-                    <button class="add-tag"><a href="#"> ADD TAG</a></button>
+                    <form action="" method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="tag">
+                        <button class="add-tag" type="submit"> ADD TAG</button>
+                    </form>
                     <button class="vaccancy"><a href="#"> POST VACCANCY</a></button>                
                 </div>
             </div>        

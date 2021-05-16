@@ -12,20 +12,11 @@ urlpatterns = [
 
     #not-registered seller 
     path('seller_register/',views.seller_register,name='seller_register'),
+    
+    #logout
+    path('logout/',views.logout_view,name='logout')
 ]
 
-    # parindas 
-
     
-    # #registered/not-registered customer
-    # path('customer-dashboard/',views.customer_dashboard),   
-
-    # #registered seller
-    # path('seller-dashboard/',views.seller_dashboard),
-
-    # #not-registered seller 
-    # path('seller-register/',views.seller_register),
-
-    # path('',views.homepage),    
     
 
