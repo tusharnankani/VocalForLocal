@@ -5,6 +5,8 @@ app_name = 'accounts'
 
 urlpatterns = [
     path('', views.homepage, name = 'homepage'),
+    path('customer_dashboard', views.customer_dashboard, name = 'customer_dashboard'),
+    path('seller_dashboard', views.seller_dashboard, name = 'seller_dashboard'),
 ]
 
     # parindas 

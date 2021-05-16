@@ -47,14 +47,15 @@ function handleSubmit() {
 
 
 
-login.addEventListener('click',() => {
+login.addEventListener('click',(e) => {
 	let otpEntered = document.getElementById("Otp").value;
 	console.log(otpEntered);
 	if(otpEntered === otp) {
-		console.log('OTP RIGHT!!')
+		console.log('OTP RIGHT!!');
 	} else {
+		e.preventDefault();
 		alert("Wrong OTP! Please Try Again.");
-		location.reload();
+		window.history.back();
 	}
 });
 
