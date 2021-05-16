@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -5,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vocal For Local</title>
-		<link rel="stylesheet" href="../static/css/seller-dashboard.css" />
+		<link rel="stylesheet" href="{% static '/css/seller-dashboard.css' %}" />
 
         <script
         type="text/javascript"
@@ -19,27 +20,27 @@
             }
         </script>
 	</head>
-	<body>
+	<body>        
 		<nav id="navbar">
 			<div class="logo" href="#">VOCAL FOR LOCAL</div>
 			<div id="google_translate_element" class="translate"></div>
 		</nav>     
-        <!-- <div class="shop-info"> -->
+        <div class="shop-info">        
             <div class="heading">
-                <div class="name">London Muffin</div>
+                <div class="name">{{ name }}</div>
                 <div class="stars">
-                    <img src="../static/images/star.svg" alt="star" class="star">
-                    <img src="../static/images/star.svg" alt="star" class="star">
-                    <img src="../static/images/star.svg" alt="star" class="star">
-                    <img src="../static/images/star.svg" alt="star" class="star">
-                    <img src="../static/images/star.svg" alt="star" class="star">
+                    <img src="{% static 'images/star.svg' %}" alt="star" class="star">
+                    <img src="{% static 'images/star.svg' %}" alt="star" class="star">
+                    <img src="{% static 'images/star.svg' %}" alt="star" class="star">
+                    <img src="{% static 'images/star.svg' %}" alt="star" class="star">
+                    <img src="{% static 'images/star.svg' %}" alt="star" class="star">
                 </div>
             </div>
             <div class="second-part">
-                <div class="left-part">                
-                    <div class="owner-name">Warraen Fernandese</div>
-                    <div class="category">Bakery</div>
-                    <div class="contact">Contact :</div>
+                <div class="left-part">
+                    <div class="category">{{ category }}</div>                
+                    <div class="owner-name">Owned By - {{ owner }}</div>                   
+                    <div class="contact">Call on : {{ phone }}</div>
                     <div class="address">
                         <div>Address :</div> 
                         <div class="address1">
@@ -54,7 +55,7 @@
                     
                     <div class="shop-timings">
                         <b>TIMINGS : </b>
-                        <p>7: 00 AM - 10 : 00 PM</p>
+                        <p>{{ time }}</p>
                     </div>
                 </div>                
                 <div class="right-part">
@@ -72,6 +73,6 @@
                     <button class="add-tag"><a href="#"> ADD TAG</a></button>
                     <button class="vaccancy"><a href="#"> POST VACCANCY</a></button>                
                 </div>
-            </div>
+            </div>        
     </body>
 </html>
