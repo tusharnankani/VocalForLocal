@@ -51,11 +51,14 @@
                     {% csrf_token %}
                     <div id="EntitySelect">
                             <input class="entity" type="radio" name = "usertype" value="business" required>
+                            <span class="desc">
                                 Business
-                            </input>
+                            </span>
+                            
                             <input class="entity" type="radio" name = "usertype" value="customer" required>
+                            <span class="desc">
                                 Customer
-                            </input>
+                            </span>
                     </div>
                     
                     <div class = "floating-label" id = "NumberWrapper">

@@ -111,6 +111,7 @@ select.goog-te-combo {
 	justify-content: space-around;
 	background: rgb(255, 255, 255);
 	margin: 0 7%;
+	align-items: center;
 }
 
 .form > form div {
@@ -129,13 +130,13 @@ select.goog-te-combo {
 	position: relative;
 }
 
-input {
+.floating-label input {
 	color: inherit;
 	font-size: 1.25em;
 
 	padding: 0.7rem;
 	display: block;
-	width: 80%;
+	width: 100%;
 
 	background-color: transparent;
 	border: none;
@@ -218,11 +219,15 @@ h5 {
 }
 
 .entity {
-	margin: 1em;
+	position: relative;
+	margin: 0 1em;
+}
+
+span.desc {
+	margin-right: 2em;
 }
 
 #Submit {
-	margin-left: 7em;
 	width: 10rem;
 }
 
