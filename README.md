@@ -2,15 +2,17 @@
 
 Supporting your neighborhood and the local communities around.
 
-#### Table of Contents
+<!-- ![VocalForLocal](https://socialify.git.ci/tusharnankani/VocalForLocal/image?description=1&font=Raleway&forks=1&issues=1&language=1&owner=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Dark) -->
 
--   Introduction
--   Design
--   Demonstration
--   Features
--   Technologies Used
--   Local Setup
--   Authors
+### Table of Contents
+
+-   [Introduction](#introduction)
+-   [Design](/docs/)
+-   [Demonstration](#demonstration)
+-   [Features](#features)
+-   [Technologies Used](#features)
+-   [Local Setup](#local-setup)
+-   [Authors](#authors)
 
 ### Introduction
 
@@ -18,9 +20,9 @@ Vocal For Local - a local product that can be used globally, to support communit
 
 ![homepage](docs/images/homepage.png)
 
-### Demonstration
+## Demonstration
 
--   Multiple Language Supported
+- Multiple Language Supported
 
 ![homepage](docs/images/home-language.png)
 
@@ -34,6 +36,8 @@ Vocal For Local - a local product that can be used globally, to support communit
 
 #### Seller Dashboard
 
+ - Clean and simple UI
+ - 
 ![homepage](docs/images/seller-dashboard.png)
 
 ### Features
@@ -59,6 +63,8 @@ For Backend
 
 ### Local Setup
 
+- Read [CODE OF CONDUCT](CODE_OF_CONDUCT.md) check [CONTRIBUTING.md](/CONTRIBUTING.md) for contributions.
+
 ```bash
 git clone https://github.com/tusharnankani/VocalForLocal.git
 git checkout -b <branch-name>
@@ -78,22 +84,22 @@ git commit -m "message"
 git push origin <branch-name>
 ```
 
+### License 📜
+
+- [MIT License](/LICENSE)
+
 ## _Authors_
 
 Meet the team.
 
--   Parinda Pranami
+- Parinda Pranami
+  - [LinkedIn](https://www.linkedin.com/in/parinda-pranami-13943b1aa/) | [Twitter](https://twitter.com/parindda_)
 
-[LinkedIn](https://www.linkedin.com/in/parinda-pranami-13943b1aa/) | [Twitter](https://twitter.com/parindda_)
+- Rishika Lulla
+  - [LinkedIn](https://www.linkedin.com/in/rishika-lulla-48109b1b1)
 
--   Rishika Lulla
+- Tushar Nankani
+  - [LinkedIn](https://www.linkedin.com/in/tusharnankani/) | [Twitter](https://twitter.com/tusharnankanii)
 
-[LinkedIn](https://www.linkedin.com/in/rishika-lulla-48109b1b1)
-
--   Tushar Nankani
-
-[LinkedIn](https://www.linkedin.com/in/tusharnankani/) | [Twitter](https://twitter.com/tusharnankanii)
-
--   Vivek Namaye
-
-[LinkedIn](https://www.linkedin.com/in/viveknamaye/)
+- Vivek Namaye
+  - [LinkedIn](https://www.linkedin.com/in/viveknamaye/)
