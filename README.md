@@ -10,7 +10,7 @@ Supporting your neighborhood and the local communities around.
 -   [Design](/docs/)
 -   [Demonstration](#demonstration)
 -   [Features](#features)
--   [Technologies Used](#features)
+-   [Technologies Used](#tech-stack)
 -   [Local Setup](#local-setup)
 -   [Authors](#authors)
 
@@ -37,7 +37,7 @@ Vocal For Local - a local product that can be used globally, to support communit
 #### Seller Dashboard
 
  - Clean and simple UI
- - 
+ 
 ![homepage](docs/images/seller-dashboard.png)
 
 ### Features
@@ -94,12 +94,9 @@ Meet the team.
 
 - Parinda Pranami
   - [LinkedIn](https://www.linkedin.com/in/parinda-pranami-13943b1aa/) | [Twitter](https://twitter.com/parindda_)
-
 - Rishika Lulla
   - [LinkedIn](https://www.linkedin.com/in/rishika-lulla-48109b1b1)
-
-- Tushar Nankani
-  - [LinkedIn](https://www.linkedin.com/in/tusharnankani/) | [Twitter](https://twitter.com/tusharnankanii)
-
 - Vivek Namaye
   - [LinkedIn](https://www.linkedin.com/in/viveknamaye/)
+- Tushar Nankani
+  - [LinkedIn](https://www.linkedin.com/in/tusharnankani/) | [Twitter](https://twitter.com/tusharnankanii)
