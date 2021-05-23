@@ -6,7 +6,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Customer Dashboard</title>
-		<link rel="stylesheet" href="{% static '/css/cusdash.css' %}" />
+		<link
+			rel="stylesheet"
+			href="{% static '/css/customer-dashboard.css' %}"
+		/>
 
 		<script
 			type="text/javascript"
@@ -20,7 +23,6 @@
 				);
 			}
 		</script>
-
 	</head>
 	<body>
 		<nav id="navbar">
@@ -28,123 +30,132 @@
 			<div id="google_translate_element" class="translate"></div>
 		</nav>
 
-        
-		
 		<div class="flex">
 			<div class="header">
-
 				<form action="" method="POST">
-				{% csrf_token %}
-					
-				<div class="title">What are you looking for ?</div>
-				<div>
-					<input type="text" name="tag" id="searchBar" placeholder="Search for tags (like: delivery, fastfood, bakery)"/>
-				</div>
+					{% csrf_token %}
 
-				<div id="popup-wrapper">
-					<div id="popup">
-						<div class="floating-label" id="PincodeWrapper">
-							<input
-								name="pincode"
-								id="Pincode"
-								pattern="[0-9]{6}"
-								maxlength="6"
-								required
-							/>
-							<label for="Number">PINCODE</label>
+					<div class="title">What are you looking for?</div>
+					<div>
+						<input
+							type="text"
+							name="tag"
+							id="searchBar"
+							placeholder="Search for tags (like: delivery, fastfood, bakery)"
+						/>
+					</div>
+
+					<div id="popup-wrapper">
+						<div id="popup">
+							<div class="floating-label" id="PincodeWrapper">
+								<input
+									name="pincode"
+									id="Pincode"
+									pattern="[0-9]{6}"
+									maxlength="6"
+									required
+								/>
+								<label for="Number">PINCODE</label>
+							</div>
 						</div>
 					</div>
-				</div>
-		
-				<button
-					type="submit"
-					name="submit"
-					value="Submit"
-					class="submit"
-				>
-					ENTER 
-				</button>
+
+					<button
+						type="submit"
+						name="submit"
+						value="Submit"
+						class="submit"
+					>
+						ENTER
+					</button>
 				</form>
-				
 			</div>
 
 			<div class="table">
-				
 				{% for seller in sellers %}
 				<div class="item">
 					<div class="first">
-						<div class="name">{{ seller.shop_name }}</div>
-						<div class="number">{{ seller.phone }}</div>
-					</div>
-					<div class="second">{{ seller.time }}</div>
-					<div class="third">
-						<div class="stars">
-							<img
-								src="../static/images/star.svg"
-								alt="star"
-								class="star"
-							/>
-							<img
-								src="../static/images/star.svg"
-								alt="star"
-								class="star"
-							/>
-							<img
-								src="../static/images/star.svg"
-								alt="star"
-								class="star"
-							/>
-							<img
-								src="../static/images/star.svg"
-								alt="star"
-								class="star"
-							/>
-							<img
-								src="../static/images/star.svg"
-								alt="star"
-								class="star"
-							/>
+						<div class="first-half">
+							<div class="name">{{ seller.shop_name }}</div>
+
+							<div class="stars">
+								<img
+									src="../static/images/star.svg"
+									alt="star"
+									class="star"
+								/>
+								<img
+									src="../static/images/star.svg"
+									alt="star"
+									class="star"
+								/>
+								<img
+									src="../static/images/star.svg"
+									alt="star"
+									class="star"
+								/>
+								<img
+									src="../static/images/star.svg"
+									alt="star"
+									class="star"
+								/>
+								<img
+									src="../static/images/star.svg"
+									alt="star"
+									class="star"
+								/>
+							</div>
 						</div>
-						
+						<div class="second-half">
+							<div class="number">{{ seller.phone }}</div>
+						</div>
+					</div>
+					<div class="second">{{ seller.address }}</div>
+					<div class="third">
+						<div class="timings">
+							{{ seller.time }}
+						</div>
 						<div class="tags">
 							{% for tag in seller.tags.all %}
-								<div class="tag">{{ tag.name }}</div>
+							<div class="tag">{{ tag.name }}</div>
 							{% endfor %}
 						</div>
-						
+
 						<div class="location">
 							<img
 								src="../static/images/location.svg"
 								alt="location"
 								class="icon"
 							/>
-							<div class="distance"><span>{{seller.pincode}}</span></div>
+							<div class="distance">
+								<span>{{seller.pincode}}</span>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				{% endfor %}
-
 			</div>
 		</div>
-	<script type="text/javascript">
-		function mysearchFunction() {
-		  let input = document.getElementById('searchBar').value;
-		  input = input.toUpperCase();
-		  let repoCard = document.getElementsByClassName('nwoc-repo-card');
-		  let card = document.getElementsByClassName('mdl-cell--6-col');
-		  let list = document.getElementsByClassName('repo-stats');
-		  console.log(card);
-		  for (let i = 0; i < list.length; i++) {
-			if (list[i].innerHTML.toUpperCase().includes(input)) {
-				repoCard[i].style.display = "";
-				card[i].style.display = "";
-			} else {
-				repoCard[i].style.display = "none";
-				card[i].style.display = "none";
+		<script type="text/javascript">
+			function mysearchFunction() {
+				let input = document.getElementById("searchBar").value;
+				input = input.toUpperCase();
+				let repoCard =
+					document.getElementsByClassName("nwoc-repo-card");
+				let card = document.getElementsByClassName("mdl-cell--6-col");
+				let list = document.getElementsByClassName("repo-stats");
+				console.log(card);
+				for (let i = 0; i < list.length; i++) {
+					if (list[i].innerHTML.toUpperCase().includes(input)) {
+						repoCard[i].style.display = "";
+						card[i].style.display = "";
+					} else {
+						repoCard[i].style.display = "none";
+						card[i].style.display = "none";
+					}
+				}
 			}
-		  }
-		} 
-	  </script>
+		</script>
 	</body>
 </html>

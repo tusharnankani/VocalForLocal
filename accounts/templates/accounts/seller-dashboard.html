@@ -28,8 +28,13 @@
                 <li>
                     <form class="logout-link" action="/logout/" method="POST">
                       {% csrf_token %}
-                      <button type="submit">LOGOUT</button>
+
+                        <button class="logout" type="submit">
+                            LOGOUT
+                        </button>
+
                     </form>
+                    
                   </li>
                   <li><div id="google_translate_element" class="translate"></div></li>
             </ul>
@@ -50,17 +55,25 @@
                 <div class="left-part">
                     <div class="category">{{ category }}</div>                
                     <div class="owner-name">Owned By - {{ owner }}</div>                   
-                    <div class="contact">Call on : {{ phone }}</div>
+                    <div class="contact">Call on: 
+                        <span class="attr">
+                            {{ phone }}
+                        </span>
+                    </div>
                     <div class="address">
-                        <div>Address :</div> 
                         <div class="address1">
-                            <br><p>{{ address }}</p>
+                            Address:
+                            <span class="attr">
+                                {{ address }}
+                            </span>
                         </div>        
                     </div>   
                     
                     <div class="shop-timings">
-                        <b>TIMINGS : </b>
-                        <p>{{ time }}</p>
+                        TIMINGS: 
+                        <span class="attr">
+                            {{ time }}
+                        </span>
                     </div>
                 </div>                
                 <div class="right-part">

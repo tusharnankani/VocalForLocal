@@ -8,8 +8,8 @@
 	border: 1px solid red; */
 }
 
-a{
-  text-decoration : none;
+a {
+	text-decoration: none;
 }
 
 nav {
@@ -22,14 +22,33 @@ nav {
 }
 
 ul {
-  display: inline;
-  }
+	display: flex;
+  align-items: center;
+
+}
 
 li {
   text-decoration: none;
-  display: inline;
+  display: inline-block;
+  margin: 0 2em;
 }
 
+.logout {
+  /* margin-bottom: 1em; */
+  background: #ffcf40;
+	font-size: 1em;
+	border-radius: 15px;
+	padding: 0.25em 0.5em;
+  transition: all 0.4s ease;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.logout:hover {
+  background: #1a1a1a;
+  color: white;
+  cursor: pointer;
+}
 
 .logo,
 .translate {
@@ -54,159 +73,163 @@ select.goog-te-combo {
 	height: 1px;
 }
 
+
 .stars {
 	/* width : 20%; */
-	display :flex;
-	justify-content : space-around;
-	align-items : center;
-  padding-top: 2.5%;
-  padding-left: 1.5%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding-top: 2.5%;
+	padding-left: 2.5%;
 }
 
-img{
-	display : inline-block;
-  size: 50px;
+img {
+	display: inline-block;
+	size: 20em;
 }
 
-.heading{
-  display:flex;
+.star {
+	width: 35px;
+	height: 37px;
+	padding: 0 2px;
 }
 
-.heading > .name{
-  color: #FFCF40;  
-  font-size: 280%;
+.heading {
+	display: flex;
+}
+
+.heading > .name {
+	color: #ffcf40;
+	font-size: 280%;
+	font-weight: bold;
+	margin-top: 2%;
+	margin-left: 2%;
+}
+
+.second-part {
+	width: 100vw;
+	height: 80vh;
+	display: flex;
+}
+
+.left-part {
+	width: 50%;
+	padding: 3em;
+}
+
+.category {
+	font-size: 2.5em;
+	font-weight: bold;
+  margin: 0.5em 0;
+  
+}
+
+.owner-name {
+	font-size: 1.75em;
+  margin: 0.75em 0;
+}
+
+.contact {
+  font-size: 1.85em;
+	font-weight: bold;
+  margin: 0.75em 0;
+  margin-top: 2em;
+}
+
+.address {
+  font-size: 1.75em;
+	font-weight: bold;
+  margin: 0.75em 0;
+}
+
+.shop-timings {
+  font-size: 1.75em;
   font-weight: bold;
-  margin-top: 2%;
-  margin-left: 2%; 
+  margin: 0.75em 0;
 }
 
-.second-part{
-  width: 100vw;
-  height: 80vh;
-  display: flex;
-}
-
-.left-part{
-  width: 50%;
-}
-
-.owner-name{  
-  font-size: larger;
-  margin-top: 0.5%;
-  margin-left: 3%;
-}
-
-.category{  
-  font-size: 170%;
-  font-weight: bold;
-  margin-top: 0.5%;
-  margin-left: 3%;
-}
-
-.contact{  
-  font-size: larger;
-  font-weight: bold;
-  margin-top: 5.5%;
-  margin-left: 3%;
-}
-
-.address{  
-  font-size: larger;
-  font-weight: bold;
-  margin-top: 2.5%;  
-  margin-left: 3%
-}
-
-.shop-timings{   
-  font-size: large;
-  font-weight: bold;
-  margin-top: 5%;
-  margin-left: 3%;
-}
-
-/* .button > .add-tag{
-  margin-right: 4%;
-  align-items: right;
+span.attr {
+  margin: 0 1em;
 }
 
 
+/*
 .vaccancy{ 
   right: 13%;
   align-items: right;
   margin-bottom: 5%;
 } */
 
-
 /* adding tags css here */
 
-.right-part{
-  width: 50%;
-  display : flex;
-  flex-direction : column;
-  justify-content: space-around;
-  align-items : center;
+.right-part {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .tags {
-  display : flex;
-  width: 60%;
-  justify-content : center;
-  align-items : center;
-  background : #F9F2DE;
-  flex-wrap : wrap;
-  border-radius : 10px;
+	display: flex;
+	width: 60%;
+	justify-content: center;
+	align-items: center;
+	background: #f9f2de;
+	flex-wrap: wrap;
+	border-radius: 10px;
+	padding: 1em;
 }
 
 .tag {
-	font-size : 20px;
-	padding : 0 10px;
-	display : flex;
-	color : #FFCF40;
-	border: 3px solid #FFCF40;
-	background : #F9F2DE;
-	border-radius : 12px;
-  margin: 10px;
+	font-size: 20px;
+	padding: 0 10px;
+	display: flex;
+	color: #ffcf40;
+	border: 3px solid #ffcf40;
+	background: #f9f2de;
+	border-radius: 12px;
+	margin: 10px;
 }
 
-.add-tag{  
-  background: #263238;
-  font-size : 24px;
-  font-weight : bold;
-  border-radius : 10px;
-  padding : 5px;
+.add-tag {
+	background: #263238;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 10px;
+	padding: 7px 10px;
 }
 
-.add-tag  { 
-  color : #FFCF40;
-  margin-top : 10px;
+.add-tag {
+	color: #ffcf40;
+	margin-top: 10px;
 }
 
-.vaccancy{  
-  background: #FFCF40;
-  font-size : 24px;
-  font-weight : bold;  
-  border-radius : 10px;
-  padding : 5px;
+.vaccancy {
+  background: #ffcf40;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 10px;
+  padding: 7px 10px;
 }
 
 .vaccancy a {
-  color :  #263238;
+	color: #263238;
 }
 
 /* css for add tag form */
 
 form {
-  display : flex;
-  flex-direction : column;
-  align-items : center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-input[type = text] { 
-  font-size : 20px;
-  padding : 5px;
-  border-radius : 10px;
-  border : 3px solid #263238;
-  color : #FFCF40;
-  font-weight : bold;
+input[type="text"] {
+	font-size: 20px;
+	padding: 5px;
+	border-radius: 10px;
+	border: 3px solid #263238;
+	color: #ffcf40;
+	font-weight: bold;
 }
-
