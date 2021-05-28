@@ -1,4 +1,4 @@
-# Vocal For Local
+# Vocal For Local :sparkles: 
 
 Supporting your neighborhood and the local communities around.
 
