@@ -22,6 +22,8 @@ Vocal For Local - a local product that can be used globally, to support communit
 
 ## Demonstration
 
+View the complete demonstration [here](https://www.linkedin.com/posts/tusharnankani_vocalforlocal-github-design-activity-6802225398445809664-YEHv) or [here](https://www.linkedin.com/posts/parindapranami_hello-everyone-here-is-our-submission-for-activity-6802205888233930752-4mTv)
+
 - Multiple Language Supported
 
 ![homepage](docs/images/home-language.png)
